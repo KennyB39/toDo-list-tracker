@@ -1,9 +1,11 @@
 
 body {
-  background-image: url("paper.gif");
+  background-image: url(./img/to-do\ .jpeg);
+  padding: 200px 100px;
+  margin: 100px;
 }
 form {
-    border: 3px solid #f1f1f1;
+    /* border: 3px solid #623e3e; */
   }
   input[type=text], input[type=password] {
     width: 100%;
