@@ -1,0 +1,31 @@
+{
+  "name": "todo-list-tracker",
+  "version": "1.0.0",
+  "description": "Our app centers around an efficient way to track your activities you need to get done. With your login credentials you can feel confident your tasks will be there when you log back on.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "connect-session-sequelize": "^7.0.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.25.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KennyB39/toDo-list-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KennyB39/toDo-list-tracker/issues"
+  },
+  "homepage": "https://github.com/KennyB39/toDo-list-tracker#readme"
+}
