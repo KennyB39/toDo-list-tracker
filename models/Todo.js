@@ -2,9 +2,9 @@ const { Model, DataTypes } = require("sequelize");
 
 const sequelize = require("../config/connection");
 
-class toDo extends Model {}
+class Todo extends Model {}
 
-toDo.init(
+Todo.init(
     {
     toDo: {
         type: DataTypes.STRING,
@@ -24,8 +24,8 @@ toDo.init(
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'toDo',
+      modelName: 'Todo',
     }
   );
   
-  module.exports = toDo;
+  module.exports = Todo;
