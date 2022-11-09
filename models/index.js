@@ -1,12 +1,12 @@
-const user = require("./user");
-const toDo = require("./toDo");
+const User = require("./User");
+const Todo = require("./Todo");
 
-user.hasMany(toDo, {
+User.hasMany(Todo, {
   foreignKey: "user_id",
 });
 
-toDo.belongsTo(user, {
+Todo.belongsTo(User, {
   foreignKey: "user_id",
 });
 
-module.exports = { User, toDo };
+module.exports = { User, Todo };
