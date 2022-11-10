@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const user = require('../../models/User');
-const { Todo, User } = require('../../modes');
+const { Todo, User } = require('../../models');
 
 module.exports = router;
