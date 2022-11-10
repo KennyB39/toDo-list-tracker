@@ -1,8 +1,10 @@
 
 body {
-  background-image: url(./img/to-do\ .jpeg);
+  background-image: url(./img/main-to-do.jpeg);
   padding: 200px 100px;
   margin: 100px;
+  background-size: 100% 100%;
+  background-repeat: repeat-x;
 }
 form {
     /* border: 3px solid #623e3e; */
@@ -14,6 +16,7 @@ form {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    box-shadow: #36abf4;
   }
   button {
     background-color: #04AA6D;
@@ -23,6 +26,7 @@ form {
     border: none;
     cursor: pointer;
     width: 100%;
+    /* box-shadow: #0b0d0e; */
   }
   button:hover {
     opacity: 0.8;
@@ -30,7 +34,7 @@ form {
   .NewUserbtn {
     
     padding: 10px 18px;
-    background-color: #f44336;
+    background-color: #36abf4;
   }
   .imgcontainer {
     text-align: center;
@@ -47,6 +51,16 @@ form {
     float: right;
     padding-top: 16px;
   }
+
+  footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(132, 202, 224);
+    color: aliceblue;
+    text-align: center;
+    }  
   @media screen and (max-width: 300px) {
     span.psw {
       display: block;
