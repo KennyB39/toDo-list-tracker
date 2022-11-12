@@ -1,0 +1,36 @@
+body {
+    background-image: url(./img/main-to-do.jpeg);
+    padding: 275px 100px;
+    margin: 150px;
+    background-size: 100% 100%;
+    background-repeat: repeat-x;
+}
+
+miniLogo{
+    
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(86, 155, 176);
+    color: aliceblue;
+    text-align: center;
+}
+
+#todoBox {
+    padding: 50px;
+}
+
+#header {
+
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+}
