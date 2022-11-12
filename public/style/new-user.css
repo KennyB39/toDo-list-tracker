@@ -1,7 +1,7 @@
 body {
     background-image: url(./img/main-to-do.jpeg);
-    padding: 200px 100px;
-    margin: 100px;
+    padding: 275px 100px;
+    margin: 65px;
     background-size: 100% 100%;
     background-repeat: repeat-x;
   }
@@ -77,7 +77,7 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(132, 202, 224);
+    background-color: rgb(86, 155, 176);
     color: aliceblue;
     text-align: center;
   }
@@ -87,8 +87,5 @@ body {
       display: block;
       float: none;
     }
-  
-    .cancelbtn {
-      width: 100%;
-    }
+
   }

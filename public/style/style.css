@@ -1,6 +1,6 @@
 body {
   background-image: url(./img/main-to-do.jpeg);
-  padding: 100px 50px;
+  padding: 75px 100px;
   margin: 100px;
   background-size: 100% 100%;
   background-repeat: repeat-x;
@@ -42,10 +42,6 @@ button:hover {
 
   padding: 10px 18px;
   background-color: #36abf4;
-}
-
-#submitBtn {
-  /* background-color: aquamarine; */
 }
 
 .imgcontainer {
