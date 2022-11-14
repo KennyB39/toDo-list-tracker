@@ -6,10 +6,6 @@ body {
   background-repeat: repeat-x;
 }
 
-form {
-  /* border: 3px solid #623e3e; */
-}
-
 input[type=text],
 input[type=password] {
   width: 100%;
