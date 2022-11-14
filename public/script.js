@@ -1,3 +1,18 @@
+
+var inputFeilds = document.querySelector("input");
 var logIn = "log in"
 
-logIn
+
+
+
+
+
+
+// function logIn() {
+  
+// }
+
+
+
+
+// object.onclick = logIn();{myScript};
