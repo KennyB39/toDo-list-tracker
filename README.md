@@ -14,7 +14,7 @@ Here is a demo video to demonstrate the functionality of our app.
 
 ## Languages
 
-Node.js/Javascript/sql/handlebars
+Node.js/Javascript/sql/
 
 ## contributors
 
