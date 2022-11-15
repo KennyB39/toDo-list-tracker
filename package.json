@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/KennyB39/toDo-list-tracker/issues"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "homepage": "https://github.com/KennyB39/toDo-list-tracker#readme"
 }

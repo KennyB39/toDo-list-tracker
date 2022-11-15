@@ -6,10 +6,6 @@ body {
   background-repeat: repeat-x;
 }
 
-form {
-  /* border: 3px solid #623e3e; */
-}
-
 input[type=text],
 input[type=password] {
   width: 100%;
@@ -35,7 +31,7 @@ button {
 }
 
 button:hover {
-  opacity: 0.8;
+  opacity: 0.3;
 }
 
 .NewUserbtn {
