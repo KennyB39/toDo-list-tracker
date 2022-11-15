@@ -30,12 +30,12 @@ Angela Amaro:
 
 Kendrick Brown:
 
-[Kendrick's GitHub](https://github.com/Angela-Amaro)
+[Kendrick's GitHub](https://github.com/KennyB39)
 
-[Kendrick's Linkedin](https://www.linkedin.com/in/angela-amaro-342792204/)
+[Kendrick's Linkedin](https://www.linkedin.com/in/coding-bassist/)
 
 Greg Krolick:
 
-[Greg's GitHub](https://github.com/Angela-Amaro)
+[Greg's GitHub](https://github.com/GregKrolick)
 
-[Greg's Linkedin](https://www.linkedin.com/in/angela-amaro-342792204/)
+[Greg's Linkedin](https://www.linkedin.com/in/gregory-krolick-617515134/)
