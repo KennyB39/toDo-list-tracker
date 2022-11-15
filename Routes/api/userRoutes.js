@@ -1,15 +1,15 @@
 const router = require("express").Router();
 const { User } = require("../../models");
-
+const path = require("path");
 // route login
-router.post('/login', async (req, res) => {
+router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
     if (!userData) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password, please try again' });
+        .json({ message: "Incorrect email or password, please try again" });
       return;
     }
 
@@ -18,18 +18,18 @@ router.post('/login', async (req, res) => {
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password, please try again' });
+        .json({ message: "Incorrect email or password, please try again" });
       return;
     }
 
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-    // login.location.replace("to-decodeURI.html");
+      // login.location.replace("to-decodeURI.html");
       //are we using replace right?
-      res.json({ user: userData, message: 'You are now logged in!' });
+      res.json({ user: userData, message: "You are now logged in!" });
+      res.sendFile(path.join(__dirname, "../public/to-do.html"));
     });
-
   } catch (err) {
     res.status(400).json(err);
   }

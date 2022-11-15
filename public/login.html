@@ -10,22 +10,26 @@
     <title>To do List</title>
 </head>
 <body>
+  
+  <div class="imgcontainer">
+    <img src="./style/img/logo.png" alt="Avatar" class="avatar">
+  </div>
     
-    <form action="action_page.php" method="post">
-        <div class="imgcontainer">
-          <img src="./style/img/logo.png" alt="Avatar" class="avatar">
-        </div>
-      
-        <div class="container">
+    <form class= "login-form" action="action_page.php" method="post">
+       <div class="container">
           <label for="email"><b>email</b></label>
-          <input type="text" placeholder="Enter email" name="email" required>
+          <input id="email-login" type="text" placeholder="Enter email" name="email" required>
       
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
 
-              
-          <button type="submit" id="login_btn" class="btn disabled" value="login" disabled="true">Login</button>
-      
+        </div>
+        <a href="to-do.html">
+          <div class="container">
+            <button type="button" class="NewUserbtn">login</button>
+            </a>
+           
+          </div>
         </div>
       <a href="new-user.html">
         <div class="container">
@@ -35,7 +39,7 @@
         </div>
       </form>
     
-      <script src="script.js"></script>
+      <script src="/script.js"></script>
      
 
 </body>
