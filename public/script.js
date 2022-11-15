@@ -1,18 +1,35 @@
+// var inputFeilds = document.querySelector("input");
+// var logIn = "log in";
+// const InputForm = document.getElementById("login_btn");
 
-var inputFeilds = document.querySelector("input");
-var logIn = "log in"
+const loginFormHandler = async (event) => {
+  event.preventDefault();
+
+  const email = document.querySelector("#email-login").value.trim();
+  const password = document.querySelector("#password-login").value.trim();
+
+  if (email && password) {
+    const response = await fetch("/api/users/login", {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (response.ok) {
+      document.location.replace("/");
+    } else {
+      alert("Failed to log in");
+    }
+  }
+};
+
+
+document
+.querySelector(".login-form")
+.addEventListener("submit", loginFormHandler);
 
 
 
-
-
-
-
-// function logIn() {
-  
 // }
-
-
-
 
 // object.onclick = logIn();{myScript};
