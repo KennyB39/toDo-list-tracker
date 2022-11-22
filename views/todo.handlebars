@@ -5,7 +5,7 @@
         <div class="header-right">
           <a class="active" href="#home">Home</a>
         </div>
-      </div>
+</div>
     <header>
     <div class="w3-container w3-text-white" id="header">
         <h1>ToDo List Items</h1>
@@ -14,8 +14,11 @@
     <form class="form todo-form">
         <div class="form-group">
             <label for="add-todo">New Todo</label>
-            <input class="form-input" type="text" id="add-todo" />
+            <input class="form-input" type="text" id="add-todo" name="add-todo" />
         </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Create</button>
+      </div>
     </form>
     
         {{!-- <ul class="w3-ul w3-card-4">
@@ -25,10 +28,21 @@
         </ul>
     </div> --}}
 
-<textbox type="input" class="new-todo">
-    <span></span>
-    <container>
-        <ul>{{Todo}}</ul>
-    </container>
+ {{#if todos.length}}
+  <div class="col-md-6 project-list">
+    <h3>Todos:</h3>
+
+    {{#each todos as |todo|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/todo/{{todo.id}}">{{todo.toDo}}</a></h4>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
 
 <footer>todo's todo list 2022</footer>
+
+<script src="./js/todo.js"></script>

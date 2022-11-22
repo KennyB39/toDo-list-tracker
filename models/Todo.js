@@ -15,7 +15,6 @@ Todo.init(
     
     toDo: {
       type: DataTypes.TEXT,
-      primaryKey: false,
       allowNull: false,
     },
     user_id: {

@@ -29,11 +29,11 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const todo = todoData.map((todo) => todo.get({ plain: true }));
+    const todos = todoData.map((todo) => todo.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('todo', { 
-      todo, 
+      todos, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -83,6 +83,27 @@ router.get('/todo', withAuth, async (req, res) => {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: Todo }],
+    });
+
+    const user = userData.get({ plain: true });
+
+    res.render('todo', {
+      ...user,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+// Use withAuth middleware to prevent access to route
+router.get('/todo', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Project }],
     });
 
     const user = userData.get({ plain: true });

@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Todo } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // add new todo record
 router.post('/', async (req, res) => {
