@@ -22,12 +22,31 @@ const loginFormHandler = async (event) => {
   }
 };
 
-document
+  const signupFormHandler = async (event) => {
+    event.preventDefault();
+  
+    const email = document.querySelector('#new-email').value.trim();
+    const password = document.querySelector('#new-password').value.trim();
+  
+    if (email && password) {
+      const response = await fetch('/api/users', {
+        method: 'POST',
+        body: JSON.stringify({ email, password }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+  
+      if (response.ok) {
+        document.location.replace('/todo');
+      } else {
+        alert("u make mistake");
+      }
+    }
+  };
+
+  document
   .querySelector('.login-form')
   .addEventListener('submit', loginFormHandler);
 
-  const showSignupFormHandler = (event) => {
-    event.preventDefault();
-  
-    document.querySelector(".login-form").style.display = "none";
-  };
+document
+  .querySelector('.newUser-form')
+  .addEventListener('submit', signupFormHandler);
