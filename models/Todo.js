@@ -6,9 +6,15 @@ class Todo extends Model {}
 
 Todo.init(
   {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      allowNull: false,
+      autoIncrement: true,
+    },
+    
     toDo: {
       type: DataTypes.TEXT,
-      primaryKey: false,
       allowNull: false,
     },
     user_id: {

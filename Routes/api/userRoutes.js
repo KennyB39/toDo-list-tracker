@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { User } = require("../../models");
-const path = require("path");
+
+
 // route login
 router.post("/login", async (req, res) => {
   try {
@@ -23,20 +24,20 @@ router.post("/login", async (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
-      // login.location.replace("to-decodeURI.html");
-      //are we using replace right?
-      res.json({ user: userData, message: "You are now logged in!" });
-      res.sendFile(path.join(__dirname, "../public/to-do.html"));
+      req.session.loggedIn = true;
+
+      res
+        .status(200)
+        .json({ user: userData, message: 'You are now logged in!' });
     });
   } catch (err) {
-    res.status(400).json(err);
+    console.log(err);
+    res.status(500).json(err);
   }
 });
 
 // route user creation
-router.post("/", async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
 
@@ -50,5 +51,6 @@ router.post("/", async (req, res) => {
     res.status(400).json(err);
   }
 });
+
 
 module.exports = router;
