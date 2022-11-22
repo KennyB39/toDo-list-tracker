@@ -1,18 +1,16 @@
 
 
-const newTextBoxHandler = async (event) => {
+const newTodoHandler = async (event) => {
   event.preventDefault();
 
 
-  const todoText = document.getElementByClass('.w3-input w3-animate-input w3-round-large').value.trim();
+  const todoText = document.querySelector('#add-todo').value.trim();
 
   if (todoText) {
     const response = await fetch(`/api/todos`, {
       method: 'POST',
       body: JSON.stringify({ todoText }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
@@ -25,5 +23,5 @@ const newTextBoxHandler = async (event) => {
 
 
 document
-  .querySelector('#todoBox')
+  .querySelector('.todo-form')
   .addEventListener("submit", newTextBoxHandler);

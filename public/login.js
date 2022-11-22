@@ -29,14 +29,14 @@ const loginFormHandler = async (event) => {
     const password = document.querySelector('#new-password').value.trim();
   
     if (email && password) {
-      const response = await fetch('/api/users', {
+      const response = await fetch('/api/users/', {
         method: 'POST',
         body: JSON.stringify({ email, password }),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
-        document.location.replace('/todo');
+        document.location.replace('/');
       } else {
         alert("u make mistake");
       }
